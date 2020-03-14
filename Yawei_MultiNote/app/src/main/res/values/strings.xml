@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Yawei_MultiNote</string>
+    <string name="about_menu">About_menu</string>
+    <string name="add">Add</string>
+    <string name="about">About</string>
+    <string name="save">Save</string>
+</resources>

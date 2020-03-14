@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="235dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:onClick="clearHistory"
+        android:text="@string/clear"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/historyContent"
+        app:layout_constraintStart_toStartOf="@+id/historyContent"
+        app:layout_constraintTop_toBottomOf="@+id/historyContent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="243dp"
+        android:layout_height="41dp"
+        android:background="#CDCECE"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/outputTiltle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/outputTiltle"
+        tools:text="Result" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Convertsion:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@id/radioButtonMiToKm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <RadioButton
+            android:id="@+id/radioButtonMiToKm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="picked"
+            android:text="Miles to Kilometers" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKmToMi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="picked"
+            android:text="Kilometers to Miles" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/inputTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Miles Value:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="??? Value:" />
+
+    <EditText
+        android:id="@+id/userInputValue"
+        android:layout_width="240dp"
+        android:layout_height="35dp"
+        android:background="#CDCECE"
+        android:gravity="center"
+        android:hint="Input Here"
+        android:inputType="numberSigned|number|numberDecimal"
+        android:textColor="@android:color/secondary_text_light"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inputTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/inputTitle"
+        tools:text="Input Here" />
+
+    <Button
+        android:id="@+id/miToKmButton"
+        android:layout_width="347dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        android:onClick="covert"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/userInputValue" />
+
+    <TextView
+        android:id="@+id/outputTiltle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Kilometers Value:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/inputTitle"
+        app:layout_constraintTop_toBottomOf="@+id/miToKmButton"
+        tools:text="??? output" />
+
+    <TextView
+        android:id="@+id/historyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Conversion History:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/historyContent"
+        android:layout_width="0dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#CDCECE"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyTitle"
+        tools:text="history" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.382" />
+</androidx.constraintlayout.widget.ConstraintLayout>
