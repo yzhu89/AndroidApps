@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/oa_mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eff0eb"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_official"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/location_official"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#5c0a5c"
+            android:text="@string/no_data_for_location"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Location_Information" />
+
+        <TextView
+            android:id="@+id/no_Internet_Warning"
+            android:layout_width="300dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="132dp"
+            android:background="@drawable/text_frame"
+            android:text="No Network Connection\n Data cannot be accessed/loaded without an internet connection."
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_official" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

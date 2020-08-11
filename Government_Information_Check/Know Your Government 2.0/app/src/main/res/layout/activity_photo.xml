@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_pa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhotoActivity">
+
+    <TextView
+        android:id="@+id/location_pa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#5c0a5c"
+        android:text="@string/no_data_for_location"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Location_Information" />
+
+    <TextView
+        android:id="@+id/office_pa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_pa"
+        tools:text="OfficeName" />
+
+    <TextView
+        android:id="@+id/name_pa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/office_pa"
+        tools:text="name" />
+
+    <ImageView
+        android:id="@+id/photo_pa"
+        style=" "
+        android:layout_width="0dp"
+        android:layout_height="460dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_pa"
+        app:srcCompat="@drawable/placeholder"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/partyImage_pa"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_pa"
+        app:layout_constraintEnd_toEndOf="@+id/photo_pa"
+        app:layout_constraintStart_toStartOf="@+id/photo_pa"
+        app:srcCompat="@drawable/placeholder" />
+
+    <Button
+        android:id="@+id/paToMain"
+        android:layout_width="238dp"
+        android:layout_height="34dp"
+        android:onClick="backToMain"
+        android:text="Go back to the Main Activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo_pa" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

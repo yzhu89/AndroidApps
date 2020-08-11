@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Know Your Government</string>
+    <string name="know_your_government">Know Your Government</string>
+    <string name="powered_by">Powered by</string>
+    <string name="google_civic">Google Civic\n Information API</string>
+    <string name="information_api">Information API</string>
+    <string name="_2020_yawei_zhu">©2020, Yawei Zhu</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="about">about</string>
+    <string name="search">search</string>
+    <string name="no_data_for_location">No Data For Location</string>
+</resources>
